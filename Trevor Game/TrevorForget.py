@@ -1,6 +1,9 @@
 import pygame
 import time
 import random
+import os
+
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 pygame.init()
 
@@ -19,8 +22,8 @@ gameDisplay = pygame.display.set_mode((display_width,display_height))
 pygame.display.set_caption('Trevor Forget v9.24.17')
 clock = pygame.time.Clock()
 
-milkImg = pygame.image.load('ms.png')
-rocketImg = pygame.image.load('trevor.png')
+milkImg = pygame.image.load( os.path.join(ROOT_DIR,'ms.png') )
+rocketImg = pygame.image.load( os.path.join(ROOT_DIR,'trevor.png') )
 #hgImg = pygame.image.load ('hg.png')
 
 def things_dodged(count):
